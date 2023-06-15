@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="{% static 'style/images/favicon.png' %}">
+<title>crea;tink</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/plugins.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/layers.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/type/icons.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/color/blue.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+</head>
+<body class="onepage" data-spy="scroll" data-target=".navbar">
+<div class="content-wrapper">
+  <nav class="navbar dark-wrapper inverse-text">
+    <div class="container">
+      <div class="flex-it">
+        <div class="navbar-header">
+          <div class="navbar-brand"><a href="index2.html"><img src="#" srcset="style/images/logo-light.png 1x,style/images/logo-light@2x.png 2x" alt="" /></a></div>
+          <div class="nav-bars-wrapper">
+            <div class="nav-bars-inner">
+              <div class="nav-bars" data-toggle="collapse" data-target=".navbar-collapse"><span></span></div>
+            </div>
+            <!-- /.nav-bars-inner -->
+          </div>
+          <!-- /.nav-bars-wrapper -->
+        </div>
+        <!-- /.nav-header -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'home' %}" class="scroll">Home</a> </li>
+            <li><a href="{% url 'about' %}" class="scroll">About Us</a> </li>
+            <li><a href="{% url 'work' 'all' %}" class="scroll">Work</a> </li>
+            <li><a href="{% url 'blog' %}" class="scroll">Blog</a> </li>
+            <li><a href="{% url 'contact' %}" class="scroll">Contact Us</a> </li>
+          </ul>
+          <!--/.navbar-nav -->
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+      <!--/.flex-it -->
+    </div>
+    <!--/.container -->
+  </nav>
+
+  <!--/.navbar -->
+  <section id="home">
+    <div class="rev_slider_wrapper fullscreen-container">
+      <div id="slider5" class="rev_slider fullscreenbanner rs-nav-dark" data-version="5.4.1">
+        <ul>
+          <li data-transition="fade" data-nav-color="dark"><img src="{% static 'style/images/art/slider-bg19.jpg' %}" alt="" />
+            <div class="tp-caption w-regular color-dark text-center"
+	        data-x="center"
+			data-y="middle"
+			data-voffset="['-70','-70','-70','-90']"
+			data-fontsize="['50','50','50','36']"
+			data-lineheight="['60','60','60','46']"
+			data-width="['1100','980','700','450']"
+			data-textAlign="['center','center','center','center']"
+			data-whitespace="['normal','normal','normal','normal']"
+			data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+			data-responsive="on"
+			data-responsive_offset="on"
+			style="z-index: 9;">Hello! Welcome to Crea;tink</div>
+            <div class="tp-caption w-light color-dark text-center"
+			data-x="center"
+			data-y="middle"
+			data-voffset="['0','0','0','0']"
+			data-fontsize="['28','28','28','22']"
+			data-lineheight="['38','38','38','32']"
+			data-width="['650','650','650','350']"
+			data-textAlign="['center','center','center','center']"
+			data-whitespace="['normal','normal','normal','normal']"
+			data-frames='[{"from":"x:50px;opacity:0;","speed":1000,"to":"o:1;","delay":1500,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+			data-responsive="on"
+			data-responsive_offset="on"
+			style="z-index: 9;">A digital & branding agency based in London</div>
+            <a class="tp-caption btn btn-rounded btn-l"
+			data-x="center"
+			data-y="middle"
+			data-voffset="['75','75','75','75']"
+			data-width="['auto','auto','auto','auto']"
+			data-textAlign="['center','center','center','center']"
+			data-frames='[{"delay":2000,"speed":2000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[175%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-responsive="on"
+			data-responsive_offset="on"
+			style="z-index: 9;" href="#">See Our Projects</a> </li>
+        </ul>
+        <div class="tp-bannertimer tp-bottom"></div>
+      </div>
+      <!-- /.rev_slider -->
+    </div>
+    <!-- /.rev_slider_wrapper -->
+  </section>
+  <!-- /#home -->
+
+
+  <div class="wrapper light-wrapper">
+    <div class="container inner">
+      <h2 class="section-title text-center">Our Latest Work</h2>
+      <p class="lead text-center">Awesome Work prepared with creative ideas and great design</p>
+      <div class="space15"></div>
+      <div class="slick-wrapper">
+        <div class="slick" data-slick='{"slidesToShow": 3, "responsive": [{"breakpoint":1024,"settings":{"slidesToShow": 2}},{"breakpoint":768,"settings":{"slidesToShow": 1}}]}'>
+
+          {% for i in l_work %}
+          <div class="item post mr-10 ml-10">
+            <figure class="overlay overlay1"><a href="{% url 'work_detail' i.id %}"></a><img src="{{i.img1.url}}" alt="" />
+              <figcaption>
+                <h5 class="from-top">View Project</h5>
+              </figcaption>
+            </figure>
+            <div class="post-content text-center mt-20">
+              <h3 class="post-title"><a href="{% url 'work_detail' i.id %}">{{i.title}}</a></h3>
+              <div class="meta"><span class="category">{{i.Category}}, Works</span></div>
+              <!-- /.meta -->
+            </div>
+            <!-- /.post-content -->
+          </div>
+          {% endfor %}
+          <!-- /.item -->
+
+
+
+
+
+          <!-- /.item -->
+          <div class="item post mr-10 ml-10">
+            <figure class="overlay overlay1"><a href="#"></a><img src="{% static 'style/images/art/f6.jpg' %}" alt="" />
+              <figcaption>
+                <h5 class="from-top mb-0">View Project</h5>
+              </figcaption>
+            </figure>
+            <div class="post-content text-center mt-20">
+              <h3 class="post-title"><a href="#">Vehicula Justo Elit</a></h3>
+              <div class="meta"><span class="category">News, Corporate</span></div>
+              <!-- /.meta -->
+            </div>
+            <!-- /.post-content -->
+          </div>
+          <!-- /.item -->
+        </div>
+        <!--/.slick -->
+        <div class="space20"></div>
+        <div class="slick-nav-container">
+          <div class="slick-nav"></div>
+        </div>
+        <!--/.slick-nav-container -->
+      </div>
+      <!--/.slick-wrapper -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <section id="about">
+    <div class="wrapper light-wrapper">
+      <div class="container inner">
+        <h2 class="section-title text-center">About the Company</h2>
+        <p class="lead text-center">A company turning ideas into beautiful things</p>
+        <div class="space30"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <figure><img src="{% static 'style/images/art/about.jpg' %}" alt=""></figure>
+          </div>
+          <!-- /column -->
+          <div class="space30 hidden-xs hidden-md hidden-lg"></div>
+          <div class="col-md-6">
+            <h3>Who is behind all this?</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <blockquote class="border">
+              <p>“Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis.”</p>
+            </blockquote>
+            <p>Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+
+
+
+
+        <!--/.row -->
+
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.light-wrapper -->
+
+  </section>
+  <!-- /#about -->
+
+  <!-- /#testimonials -->
+
+
+
+  <!-- /#contact -->
+</div>
+<!-- /.content-wrapper -->
+
+
+<footer class="gray-wrapper footer-bg footer-bg3">
+  <div class="sub-footer">
+    <div class="container inner pt-60 pb-30 text-center"> <img src="#" srcset="style/images/logo.png 1x, style/images/logo@2x.png 2x" alt="" />
+      <div class="space20"></div>
+      <p>© 2017 crea;tink. All rights reserved. Theme by elemis.</p>
+      <div class="space20"></div>
+      <ul class="social social-bg social-s">
+        <li><a href="#"><i class="et-twitter"></i></a></li>
+        <li><a href="#"><i class="et-facebook"></i></a></li>
+        <li><a href="#"><i class="et-pinterest"></i></a></li>
+        <li><a href="#"><i class="et-vimeo"></i></a></li>
+        <li><a href="#"><i class="et-instagram"></i></a></li>
+      </ul>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.sub-footer -->
+</footer>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script type="text/javascript" src="{% static 'style/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/scripts.js' %}"></script>
+
+</body>
+</html>

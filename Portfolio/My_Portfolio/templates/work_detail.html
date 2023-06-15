@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="{% static 'style/images/favicon.png' %}">
+<title>crea;tink</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/plugins.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/layers.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/type/icons.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/color/blue.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+</head>
+<body class="onepage" data-spy="scroll" data-target=".navbar">
+<div class="content-wrapper">
+  <nav class="navbar dark-wrapper inverse-text">
+    <div class="container">
+      <div class="flex-it">
+        <div class="navbar-header">
+          <div class="navbar-brand"><<a href="index2.html"><img src="#" srcset="style/images/logo-light.png 1x,style/images/logo-light@2x.png 2x" alt="" /></a></div>
+          <div class="nav-bars-wrapper">
+            <div class="nav-bars-inner">
+              <div class="nav-bars" data-toggle="collapse" data-target=".navbar-collapse"><span></span></div>
+            </div>
+            <!-- /.nav-bars-inner -->
+          </div>
+          <!-- /.nav-bars-wrapper -->
+        </div>
+        <!-- /.nav-header -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'home' %}" class="scroll">Home</a> </li>
+            <li><a href="{% url 'about' %}" class="scroll">About Us</a> </li>
+            <li><a href="{% url 'work' 'all' %}" class="scroll">Work</a> </li>
+            <li><a href="{% url 'blog' %}" class="scroll">Blog</a> </li>
+            <li><a href="{% url 'contact' %}" class="scroll">Contact Us</a> </li>
+          </ul>
+          <!--/.navbar-nav -->
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+      <!--/.flex-it -->
+    </div>
+    <!--/.container -->
+  </nav>
+
+
+
+
+  <div class="wrapper light-wrapper">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="blog classic-view single">
+            <span class="category"><a href="#" class="label bg-red">{{wd.Category}} Category</a></span>
+            <div class="post">
+              <div class="slick-wrapper">
+        <div class="slick text-center mb-40" data-slick='{"slidesToShow": 1}'>
+          <div class="item"> <img src="{{wd.img1.url}}" alt="" height="400" width="550" /> </div>
+          <!--/.item -->
+          <div class="item"> <img src="{{wd.img2.url}}" alt="" height="400" width="550"/> </div>
+            <div class="item"> <img src="{{wd.img3.url}}" alt="" height="400" width="550"/> </div>
+          <!--/.item -->
+        </div>
+        <!--/.slick -->
+        <div class="slick-nav-container inner-arrows bg light-bg">
+          <div class="slick-nav"></div>
+        </div>
+        <!--/.slick-nav-container -->
+      </div>
+
+              <div class="post-content">
+                <h1 class="post-title">{{wd.title}}</h1>
+                <p>{{wd.short_description}}</p>
+                <p>{{wd.long_description}} </p>
+                <div class="space10"></div>
+               <!-- <blockquote class="border">
+                </blockquote>-->
+
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+<footer class="gray-wrapper footer-bg footer-bg3">
+  <div class="sub-footer">
+    <div class="container inner pt-60 pb-30 text-center"> <img src="#" srcset="style/images/logo.png 1x, style/images/logo@2x.png 2x" alt="" />
+      <div class="space20"></div>
+      <p>© 2017 crea;tink. All rights reserved. Theme by elemis.</p>
+      <div class="space20"></div>
+      <ul class="social social-bg social-s">
+        <li><a href="#"><i class="et-twitter"></i></a></li>
+        <li><a href="#"><i class="et-facebook"></i></a></li>
+        <li><a href="#"><i class="et-pinterest"></i></a></li>
+        <li><a href="#"><i class="et-vimeo"></i></a></li>
+        <li><a href="#"><i class="et-instagram"></i></a></li>
+      </ul>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.sub-footer -->
+</footer>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script type="text/javascript" src="{% static 'style/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/scripts.js' %}"></script>
+</div>
+</div>
+</body>
+</html>

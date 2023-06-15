@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="{% static 'style/images/favicon.png' %}">
+<title>crea;tink</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/plugins.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/layers.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/revolution/css/navigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/type/icons.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style/css/color/blue.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+</head>
+<body class="onepage" data-spy="scroll" data-target=".navbar">
+<div class="content-wrapper">
+  <nav class="navbar dark-wrapper inverse-text">
+    <div class="container">
+      <div class="flex-it">
+        <div class="navbar-header">
+          <div class="navbar-brand"><a href="index2.html"><img src="{% static 'style/images/dummy.png' %}"  alt="" /></a></div>
+          <div class="nav-bars-wrapper">
+            <div class="nav-bars-inner">
+              <div class="nav-bars" data-toggle="collapse" data-target=".navbar-collapse"><span></span></div>
+            </div>
+            <!-- /.nav-bars-inner -->
+          </div>
+          <!-- /.nav-bars-wrapper -->
+        </div>
+        <!-- /.nav-header -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'home' %}" class="scroll">Home</a> </li>
+            <li><a href="{% url 'about' %}" class="scroll">About Us</a> </li>
+            <li><a href="{% url 'work' 'all' %}" class="scroll">Work</a> </li>
+            <li><a href="{% url 'blog' %}" class="scroll">Blog</a> </li>
+            <li><a href="{% url 'contact' %}" class="scroll">Contact Us</a> </li>
+          </ul>
+          <!--/.navbar-nav -->
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+      <!--/.flex-it -->
+    </div>
+    <!--/.container -->
+  </nav>
+</div>
+
+        <!-- /.navbar-other -->
+      </div>
+      <!--/.flex-it -->
+    </div>
+    <!--/.container -->
+  </nav>
+  <!--/.navbar -->
+
+
+  <div class="wrapper light-wrapper">
+
+    <div class="container inner">
+      <div class="tiles tiles-m">
+             <div class="isotope row grid-1">
+
+      {% for i in blogdata %}
+       <div class="item grid-sizer col-sm-6 col-md-4 web">
+      <div class="row">
+       <!-- <div class="col-sm-6">-->
+          <div class="blog classic-view">
+
+            <div class="post">
+              <figure class="overlay overlay1"><a href="{% url 'blog_detail' i.id %}"></a><img src="{{i.img.url}}" height="100" width="250" alt="" />
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <span class="category"><a href="{% url 'blog_detail' i.id %}" class="label bg-red">{{i.title}}</a></span>
+              <div class="post-content">
+                <h2 class="post-title"><a href="blog-post.html">Blog post with single image</a></h2>
+
+                <a href="{% url 'blog_detail' i.id %}" class="more">Continue reading</a> </div>
+              <!-- /.post-content -->
+
+            </div>
+            <!-- /.post -->
+            <hr />
+
+
+
+
+
+          </div>
+          <!-- /.blog -->
+
+
+
+
+        <!-- /column .sidebar -->
+      </div>
+      <!--/.row -->
+
+    </div>
+      {% endfor %}
+               </div>
+      </div>
+    <!-- /.container -->
+ </div>
+
+
+</div>
+
+
+<footer class="gray-wrapper footer-bg footer-bg3">
+  <div class="sub-footer">
+    <div class="container inner pt-60 pb-30 text-center"> <img src="#" srcset="style/images/logo.png 1x, style/images/logo@2x.png 2x" alt="" />
+      <div class="space20"></div>
+      <p>© 2017 crea;tink. All rights reserved. Theme by elemis.</p>
+      <div class="space20"></div>
+      <ul class="social social-bg social-s">
+        <li><a href="#"><i class="et-twitter"></i></a></li>
+        <li><a href="#"><i class="et-facebook"></i></a></li>
+        <li><a href="#"><i class="et-pinterest"></i></a></li>
+        <li><a href="#"><i class="et-vimeo"></i></a></li>
+        <li><a href="#"><i class="et-instagram"></i></a></li>
+      </ul>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.sub-footer -->
+</footer>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script type="text/javascript" src="{% static 'style/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'style/js/scripts.js' %}"></script>
+
+
+</body>
+</html>
