@@ -74,10 +74,10 @@
 
             {% for i in wdata %}
             <div class="item grid-sizer col-sm-6 col-md-4 web">
-              <figure class="overlay overlay9"><a href="{% url 'work_detail' i.id %}" data-toggle="modal" data-target="#myModal1"></a><img src="{{ i.img1.url }}" alt="" />
+              <figure class="overlay overlay9"><a href="{% url 'work_detail' i.id %}" data-toggle="modal" data-target="#myModal1"></a><img src="{{ i.img.url }}" alt="" />
                 <figcaption>
                   <a href="{% url 'work_detail' i.id %}"> <h4>{{i.title}}</h4></a>
-                  <div class="meta mb-0">{{i.Category}}, Works</div>
+                  <div class="meta mb-0">{{i.catdata.name}}, Works</div>
                   <!-- /.meta --> </figcaption>
               </figure>
             </div>
@@ -91,20 +91,19 @@
            <div class="tiles tiles-m">
              <div class="isotope row grid-1">
             {% for i in wdata %}
+                {% if i.type == 'Commercial' %}
 
             <div class="item grid-sizer col-sm-6 col-md-4 web">
-                  {% if i.Category == 'Commercial' %}
-              <figure class="overlay overlay9"><a href="{% url 'work_detail' i.id %}" data-toggle="modal" data-target="#myModal1"></a><img src="{{i.img1.url}}" alt="" />
+
+              <figure class="overlay overlay9"><a href="{% url 'work_detail' i.id %}" data-toggle="modal" data-target="#myModal1"></a><img src="{{i.img.url}}" alt="" />
                 <figcaption>
                   <a href="{% url 'work_detail' i.id %}"><h4>Curabitur Blandit</h4></a>
-                  <div class="meta mb-0">{{i.Category}}, Works</div>
+                  <div class="meta mb-0">{{i.catdata.name}}, Works</div>
                   <!-- /.meta --> </figcaption>
               </figure>
-              {% endif %}
+
             </div>
-
-
-
+               {% endif %}
             {% endfor %}
              </div>
       </div>
@@ -117,9 +116,9 @@
         <div class="tiles tiles-m">
           <div class="isotope row grid-1">
             {% for i in wdata %}
-            {% if i.Category == 'Personal' %}
+            {% if i.type == 'Personal' %}
             <div class="item grid-sizer col-sm-6 col-md-4 web">
-              <figure class="overlay overlay9"><a href="{% url 'work_detail' i.id %}" data-toggle="modal" data-target="#myModal1"></a><img src="{{ i.img1.url }}" alt="" />
+              <figure class="overlay overlay9"><a href="{% url 'work_detail' i.id %}" data-toggle="modal" data-target="#myModal1"></a><img src="{{ i.img.url }}" alt="" />
                 <figcaption>
                   <a href="{% url 'work_detail' i.id %}"><h4>Curabitur Blandit</h4></a>
                   <div class="meta mb-0">Business, Works</div>

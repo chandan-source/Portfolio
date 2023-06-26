@@ -7,3 +7,5 @@ admin.site.register(Work)
 admin.site.register(message_detail)
 
 admin.site.register(Home_page)
+admin.site.register(About)
+admin.site.register(Review)

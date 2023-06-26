@@ -4,10 +4,22 @@ from.models import *
 
 # Create your views here.
 def home(request):
+    rdata=Review.objects.all()
+    rdata=rdata[::-1]
+    rdata=rdata[0:3]
+    l_work=Work.objects.all()
+    l_work=l_work[::-1]
+    l_work=l_work[0:3]
+    d={"rdata":rdata,"l_work":l_work}
+    
 
-    return render(request,'base.html')
+    return render(request,'base.html',d)
 def aboutus(request):
-    return render(request,'about.html')
+    adata=About.objects.all()
+    abdata=adata[::-1]
+    aboutdata=abdata[0:1]
+    d={"aboutdata":aboutdata}
+    return render(request,'about.html',d)
 def my_work(request,type):
     c1='';
     c2='';

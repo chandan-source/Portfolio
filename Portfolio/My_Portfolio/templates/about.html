@@ -60,24 +60,22 @@
       <h2 class="section-title text-center">About Me</h2>
       <p class="lead text-center">A company turning ideas into beautiful things</p>
       <div class="space30"></div>
+      {% for i in aboutdata %}
       <div class="row">
         <div class="col-md-6">
-          <figure><img src="{% static 'style/images/art/about.jpg' %}" alt=""></figure>
+          <figure><img src="{{i.img.url}}" alt=""></figure>
         </div>
         <!-- /column -->
-        <div class="space30 hidden-xs hidden-md hidden-lg"></div>
+
         <div class="col-md-6">
-          <h3>Who is behind all this?</h3>
 
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          <blockquote class="border">
-            <p>“Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis.”</p>
-          </blockquote>
-          <p>Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+
+        <p>   {{i.description}}</p>
 
 
         </div>
         <!-- /column -->
+        {% endfor %}
       </div>
       <!-- /.row -->
 
@@ -112,7 +110,7 @@
   <div class="sub-footer">
     <div class="container inner pt-60 pb-30 text-center"> <img src="#" srcset="style/images/logo.png 1x, style/images/logo@2x.png 2x" alt="" />
       <div class="space20"></div>
-      <p>© 2017 crea;tink. All rights reserved. Theme by elemis.</p>
+      <p>copyright @CreativeKernelByNami</p>
       <div class="space20"></div>
       <ul class="social social-bg social-s">
         <li><a href="#"><i class="et-twitter"></i></a></li>

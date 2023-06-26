@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-options=[["video","video"],["images","images"],["zip","zip"]]
+options=[["Commercial","Commercial"],["Personal","Personal"]]
 class Category(models.Model):
     name=models.CharField(max_length=100,null=True)
     def __str__(self):
@@ -11,9 +11,9 @@ class Work(models.Model):
     catdata=models.ForeignKey(Category,max_length=100,null=True,on_delete=models.CASCADE)
     type=models.CharField(choices=options,null=True,max_length=100)
     title=models.CharField(max_length=100,null=True)
-    img1 = models.FileField(null=True)
-    img2 = models.FileField(null=True)
-    img3 = models.FileField(null=True)
+    img = models.FileField(null=True)
+    gif = models.FileField(null=True)
+    video=models.FileField(null=True)
     short_description=models.TextField(null=True)
     long_description=models.TextField(null=True)
 
@@ -44,4 +44,17 @@ class Home_page(models.Model):
     img2=models.FileField(null=True)
     img3=models.FileField(null=True)
     video=models.FileField(null=True,blank=True)
+
+
+
+
+class About(models.Model):
+    img=models.FileField(null=True)
+    description=models.TextField(null=True)
+class Review(models.Model):
+    name=models.CharField(null=True,max_length=100)
+    img=models.FileField(null=True)
+    description=models.TextField(null=True)
+    def __str__(self):
+        return self.name
 
